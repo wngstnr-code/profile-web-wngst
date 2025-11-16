@@ -180,7 +180,7 @@ span{
 }
 
 .portfolio-container{
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -192,9 +192,22 @@ span{
     background: var(--snd-bf-color);
     padding: 3rem 2rem 4rem;
     border-radius: 2rem;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.8rem;
     border: .6rem solid var(--snd-bf-color);
     transition:.5s ease
+}
+
+.portfolio-container .portfolio-content{
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .portfolio-container .portfolio-box:hover{
@@ -203,8 +216,9 @@ span{
 }
 
 .portfolio-box i{
-    font-size: 7rem ;
+    font-size: 4rem ;
     color: var(--main-color);
+    gap: 1rem;
 }
 
 .portfolio-box h3{
@@ -255,6 +269,7 @@ span{
 
 .contact form .btn{
     margin-top: 2rem;
+    cursor: pointer;
 }
 
 /* BREAKPOINT */
@@ -341,6 +356,11 @@ span{
 
     .portfolio h2{
         margin-bottom: 3rem;
+    }
+    /* stack portfolio box contents on small screens */
+    .portfolio-container .portfolio-box{
+        flex-direction: column;
+        text-align: center;
     }
 }
 

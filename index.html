@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +8,11 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <title>Wangsit Profile</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </head>
 
 <body>
@@ -21,7 +24,7 @@
 
         <nav class="navbar">
             <a href="#home" class="active">HOME</a>
-            <a href="#about">ABOUT</a>
+            <!-- <a href="#about">ABOUT</a> -->
             <a href="#portfolio">PORTFOLIO</a>
             <a href="#contact">CONTACT</a>
         </nav>
@@ -36,10 +39,10 @@
             <p>Get to know more about me on my social media</p>
             <div class="social-media">
                 <a href="https://www.instagram.com/wngst.nr/"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://x.com/NurWangsit"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/wangsit-nursyahada-079599345/"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/wngstnr-code"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/wangsitnursyahada/"><i class="fa-brands fa-linkedin-in"></i></a>
             </div>
-            <a href="#" class="btn">Download CV</a>
+            <a href="assets/CV_WangsitNursyahada.pdf" download class="btn">Download CV</a>
         </div>
 
         <div class="home-img">
@@ -47,7 +50,7 @@
         </div>
     </section>
 
-    <!-- ABOUT SECTION DESIGN -->
+    <!-- ABOUT SECTION DESIGN
     <section class="about" id="about">
         <div class="about-img">
             <img src="assets/almet.png" alt="">
@@ -65,32 +68,43 @@
             <p>I am excited to keep learning and improving my abilities in the field of technology. With this journey, I
                 hope to contribute to creating impactful innovations in the future.</p>
         </div>
-    </section>
+    </section> -->
 
     <!-- PORTFOLIO SECTION DESIGN -->
     <section class="portfolio" id="portfolio">
-        <h2 class="heading">My <span>Portfolio</span></h2>
+        <h2 class="heading">My <span>Portfolio</span> <i class="fa-solid fa-code"></i> </h2>
 
         <div class="portfolio-container">
             <div class="portfolio-box">
-                <i class="fa-solid fa-code"></i>
-                <h3>Web Development</h3>
-                <p>Check out my portfolio on web development here</p>
-                <a href="#" class="btn">View More</a>
-            </div>
+                <div class="portfolio-content">
+                    <i class="devicon-mongodb-plain  "></i>
+                    <i class="devicon-react-original "></i>
+                    <i class="devicon-nodejs-plain "></i>
+                    <i class="devicon-express-original "></i>
+                    <h3>MERN Stack</h3>
+                </div>
+                <div class="portfolio-deskrpisi">
+                    <p></p>
+                    <a href=""></a>
+                </div>
 
-            <div class="portfolio-box">
-                <i class="fa-brands fa-android"></i>
-                <h3>App Development</h3>
-                <p>Check out my portfolio on app development here</p>
-                <a href="#" class="btn">View More</a>
-            </div>
+                <div class="portfolio-content">
+                    <i class="devicon-python-plain "></i>
+                    <h3>Python</h3>
+                </div>
+                <div class="portfolio-deskrpisi">
+                    <p></p>
+                    <a href=""></a>
+                </div>
 
-            <div class="portfolio-box">
-                <i class="fa-solid fa-database"></i>
-                <h3>Data Analyst</h3>
-                <p>Check out my portfolio on data analyst here</p>
-                <a href="#" class="btn">View More</a>
+                <div class="portfolio-content">
+                    <i class="devicon-cplusplus-plain"></i>
+                    <h3>C++</h3>
+                </div>
+                <div class="portfolio-deskrpisi">
+                    <p></p>
+                    <a href=""></a>
+                </div>
             </div>
         </div>
     </section>
@@ -99,18 +113,19 @@
     <section class="contact" id="contact">
         <h2 class="heading">Contact<span> Me</span></h2>
 
-        <form action="#">
+        <form id="contactForm">
             <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email Addres">
+                <input type="text" name="from_name" placeholder="Full Name" required>
+                <input type="email" name="from_email" placeholder="Email Address" required>
             </div>
 
             <div class="input-box">
-                <input type="number" placeholder="Mobile Number">
-                <input type="text" placeholder="Email Subject">
+                <input type="number" name="phone" placeholder="Mobile Number">
+                <input type="text" name="subject" placeholder="Email Subject" required>
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Massage"></textarea>
-            <input type="submit" value="Send Massage" class="btn">
+            <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <input type="submit" value="Send Message" class="btn">
+            <p id="status" style="margin-top: 1rem; font-size: 1.4rem;"></p>
         </form>
     </section>
 

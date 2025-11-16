@@ -1,4 +1,3 @@
-
 // TOGGLE ICON NAVBAR
 
 let menuIcon = document.querySelector('#menu-icon');
@@ -50,4 +49,46 @@ ScrollReveal().reveal('.home-img, .portfolio-container, .contact form', {origin:
 ScrollReveal().reveal('.home-contact h1, .about-img', {origin:'left'});
 ScrollReveal().reveal('.home-contact p, .about-content', {origin:'right'});
 
-// TYPED JS
+
+document.addEventListener('DOMContentLoaded', function() {
+    
+    emailjs.init("6LTGIqIQX4guZrVLc");
+
+    const contactForm = document.getElementById('contactForm');
+    
+    if (contactForm) { 
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault(); 
+            
+            emailjs.sendForm('service_erul6cq', 'template_qoymze9', this)
+                .then(function() {
+                    
+                    Toastify({
+                        text: "✅ Message sent successfully!",
+                        duration: 3000,
+                        gravity: "top",
+                        position: "right",
+                        style: {
+                            background: "linear-gradient(to right, #00b09b, #96c93d)",
+                        }
+                    }).showToast();
+                    
+                    contactForm.reset(); 
+                    
+                }, function(error) {
+                    
+                    Toastify({
+                        text: "❌ Failed: " + error.text, 
+                        duration: 5000,
+                        gravity: "top",
+                        position: "right",
+                        style: {
+                            background: "linear-gradient(to right, #ff0015ff, #fe5842ff)",
+                        }
+                    }).showToast();
+                });
+        });
+    } else {
+        console.error('Form dengan ID "contactForm" tidak ditemukan.');
+    }
+});
