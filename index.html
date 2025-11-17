@@ -50,60 +50,102 @@
         </div>
     </section>
 
-    <!-- ABOUT SECTION DESIGN
-    <section class="about" id="about">
-        <div class="about-img">
-            <img src="assets/almet.png" alt="">
-        </div>
-
-        <div class="about-content">
-            <h2 class="heading">ABOUT <span>Me</span></h2>
-            <h3>IT & Data Enthusiast</h3>
-            <p>Hello,I am Wangsit Nursyahada, a 19 year old student currently studying Information Engineering at
-                Universitas Gadjah Mada. I live in Indonesia and i am a native of Pacitan, East Java. I am passionate
-                about exploring the world of informationtechnology.</p>
-            <p>Right now, I am learning several programming languages and technologies, including HTML, CSS, JavaScript,
-                C++, Python, and SQL. These skills are helping me develop expertise in software development, web
-                programming, and database management.</p>
-            <p>I am excited to keep learning and improving my abilities in the field of technology. With this journey, I
-                hope to contribute to creating impactful innovations in the future.</p>
-        </div>
-    </section> -->
-
     <!-- PORTFOLIO SECTION DESIGN -->
     <section class="portfolio" id="portfolio">
         <h2 class="heading">My <span>Portfolio</span> <i class="fa-solid fa-code"></i> </h2>
 
         <div class="portfolio-container">
+            <!-- PORTFOLIO 1 -->
             <div class="portfolio-box">
-                <div class="portfolio-content">
-                    <i class="devicon-mongodb-plain  "></i>
-                    <i class="devicon-react-original "></i>
-                    <i class="devicon-nodejs-plain "></i>
-                    <i class="devicon-express-original "></i>
-                    <h3>MERN Stack</h3>
-                </div>
-                <div class="portfolio-deskrpisi">
-                    <p></p>
-                    <a href=""></a>
-                </div>
-
-                <div class="portfolio-content">
-                    <i class="devicon-python-plain "></i>
-                    <h3>Python</h3>
-                </div>
-                <div class="portfolio-deskrpisi">
-                    <p></p>
-                    <a href=""></a>
+                <div class="portfolio-info">
+                    <div class="portfolio-content">
+                        <i class="fas fa-lock"></i>
+                        <h3>MERN Authentication System</h3>
+                    </div>
+                    <div class="portfolio-deskripsi">
+                        <p>Sistem autentikasi full-stack berbasis MERN (MongoDB, Express, React, Node.js) dengan fitur lengkap untuk manajemen pengguna modern. Mendukung registrasi dan login dengan validasi email, OTP verifikasi, reset password via email, serta proteksi rute menggunakan JWT. Dibangun dengan antarmuka responsif dan pengalaman pengguna yang intuitif.</p>
+                        <p>Teknologi : </p>
+                        <p>Frontend: React 18, Vite, React Router, Axios, Tailwind CSS</p>
+                        <p>Backend: Node.js, Express.js, MongoDB (Mongoose), JWT, Bcryptjs, Nodemailer</p>
+                    </div>
                 </div>
 
-                <div class="portfolio-content">
-                    <i class="devicon-cplusplus-plain"></i>
-                    <h3>C++</h3>
+                <div class="portfolio-carousel">
+                    <button class="carousel-btn prev" onclick="moveSlide(-1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel-container">
+                        <div class="carousel-slides">
+                            <img src="assets/mern-auth/mern-home.png" alt="MERN Home" class="carousel-slide active">
+                            <img src="assets/mern-auth/mern-homeLogin.png" alt="MERN Home Login" class="carousel-slide">
+                            <img src="assets/mern-auth/mern-register.png" alt="MERN Register" class="carousel-slide">
+                            <img src="assets/mern-auth/mern-login.png" alt="MERN Login" class="carousel-slide">
+                            <img src="assets/mern-auth/mern-resetPass.png" alt="MERN Reset Password" class="carousel-slide">
+                            <img src="assets/mern-auth/mern-otp.png" alt="MERN OTP" class="carousel-slide">
+                            <img src="assets/mern-auth/mern-otpReset.png" alt="MERN OTP" class="carousel-slide">
+                        </div>
+                    </div>
+                    <button class="carousel-btn next" onclick="moveSlide(1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <div class="carousel-dots">
+                        <span class="dot active" onclick="currentSlide(0)"></span>
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                        <span class="dot" onclick="currentSlide(5)"></span>
+                        <span class="dot" onclick="currentSlide(6)"></span>
+                    </div>
                 </div>
-                <div class="portfolio-deskrpisi">
-                    <p></p>
-                    <a href=""></a>
+            </div>
+
+            <!-- PORTFOLIO 2 -->
+             <div class="portfolio-box reverse">
+                <div class="portfolio-info">
+                    <div class="portfolio-content">
+                        <i class="fas fa-bullhorn"></i>
+                        <h3>Laporin Aja - Platform Pengaduan Masyarakat Berbasis AI</h3>
+                    </div>
+                    <div class="portfolio-deskripsi">
+                        <p>Aplikasi Single Page Application berbasis React & Vite untuk membuat, melacak, dan memberi dukungan pada laporan publik. Dilengkapi UI responsif berbasis Tailwind CSS serta ikon modern dari lucide-react dan react-icons. Dirancang sebagai antarmuka terintegrasi untuk interaksi pengguna dalam sistem pelaporan publik. (Tidak diselesaikan Backendnya karena tidak lolos final)</p>
+                        <p>Teknologi : </p>
+                        <p>Frontend: React 18, Vite, React Router</p>
+                        <p>Styling: Tailwind CSS, lucide-react, react-icons</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-carousel">
+                    <button class="carousel-btn prev" onclick="moveSlide2(-1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel-container">
+                        <div class="carousel-slides" id="carousel2">
+                            <img src="assets/laporin-aja/landing-page.png" alt="" class="carousel-slide active">
+                            <img src="assets/laporin-aja/login-page.png" alt="" class="carousel-slide">
+                            <img src="assets/laporin-aja/register-page.png" alt="" class="carousel-slide">
+                            <img src="assets/laporin-aja/lapor-page.png" alt="" class="carousel-slide">
+                            <img src="assets/laporin-aja/form-page.png" alt="" class="carousel-slide">
+                            <img src="assets/laporin-aja/pilihLaporan-page.png" alt="" class="carousel-slide">
+                            <img src="assets/laporin-aja/upvote-page.png" alt="" class="carousel-slide">
+                            <img src="assets/laporin-aja/lacak-page.png" alt="" class="carousel-slide">
+                            <img src="assets/laporin-aja/lacakKode-page.png" alt="" class="carousel-slide">
+                        </div>
+                    </div>
+                    <button class="carousel-btn next" onclick="moveSlide2(1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <div class="carousel-dots" id="dots2">
+                        <span class="dot active" onclick="currentSlide2(0)"></span>
+                        <span class="dot" onclick="currentSlide2(1)"></span>
+                        <span class="dot" onclick="currentSlide2(2)"></span>
+                        <span class="dot" onclick="currentSlide2(3)"></span>
+                        <span class="dot" onclick="currentSlide2(4)"></span>
+                        <span class="dot" onclick="currentSlide2(5)"></span>
+                        <span class="dot" onclick="currentSlide2(6)"></span>
+                        <span class="dot" onclick="currentSlide2(7)"></span>
+                        <span class="dot" onclick="currentSlide2(8)"></span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -133,4 +175,6 @@
     <script src="main.js"></script>
 </body>
 
+</html>
+</html>
 </html>

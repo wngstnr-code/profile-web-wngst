@@ -92,3 +92,73 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('Form dengan ID "contactForm" tidak ditemukan.');
     }
 });
+
+// CAROUSEL 1 FUNCTIONALITY
+let currentSlideIndex = 0;
+
+function showSlide(index) {
+    const slides = document.querySelectorAll('#carousel1 .carousel-slide');
+    const dots = document.querySelectorAll('#dots1 .dot');
+    
+    if (!slides.length) return; 
+    
+    if (index >= slides.length) {
+        currentSlideIndex = 0;
+    } else if (index < 0) {
+        currentSlideIndex = slides.length - 1;
+    } else {
+        currentSlideIndex = index;
+    }
+    
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    slides[currentSlideIndex].classList.add('active');
+    dots[currentSlideIndex].classList.add('active');
+}
+
+function moveSlide(direction) {
+    showSlide(currentSlideIndex + direction);
+}
+
+function currentSlide(index) {
+    showSlide(index);
+}
+
+// CAROUSEL 2 FUNCTIONALITY
+let currentSlideIndex2 = 0;
+
+function showSlide2(index) {
+    const slides = document.querySelectorAll('#carousel2 .carousel-slide');
+    const dots = document.querySelectorAll('#dots2 .dot');
+    
+    if (!slides.length) return; 
+    
+    if (index >= slides.length) {
+        currentSlideIndex2 = 0;
+    } else if (index < 0) {
+        currentSlideIndex2 = slides.length - 1;
+    } else {
+        currentSlideIndex2 = index;
+    }
+    
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    slides[currentSlideIndex2].classList.add('active');
+    dots[currentSlideIndex2].classList.add('active');
+}
+
+function moveSlide2(direction) {
+    showSlide2(currentSlideIndex2 + direction);
+}
+
+function currentSlide2(index) {
+    showSlide2(index);
+}
+
+// Auto slide every 5 seconds
+setInterval(() => {
+    moveSlide(1);
+    moveSlide2(1);
+}, 5000);
