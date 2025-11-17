@@ -157,8 +157,41 @@ function currentSlide2(index) {
     showSlide2(index);
 }
 
-// Auto slide every 5 seconds
+// CAROUSEL 3 FUNCTIONALITY
+let currentSlideIndex3 = 0;
+
+function showSlide3(index) {
+    const slides = document.querySelectorAll('#carousel3 .carousel-slide');
+    const dots = document.querySelectorAll('#dots3 .dot');
+
+    if (!slides.length) return; 
+
+    if (index >= slides.length) {
+        currentSlideIndex3 = 0;
+    } else if (index < 0) {
+        currentSlideIndex3 = slides.length - 1;
+    } else {
+        currentSlideIndex3 = index;
+    }
+
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+
+    slides[currentSlideIndex3].classList.add('active');
+    dots[currentSlideIndex3].classList.add('active');
+}
+
+function moveSlide3(direction) {
+    showSlide3(currentSlideIndex3 + direction);
+}
+
+function currentSlide3(index) {
+    showSlide3(index);
+}
+
+// Update auto-slide to include carousel 3
 setInterval(() => {
     moveSlide(1);
     moveSlide2(1);
-}, 5000);
+    moveSlide3(1);
+}, 7000);

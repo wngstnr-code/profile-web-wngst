@@ -75,7 +75,7 @@
                         <i class="fas fa-chevron-left"></i>
                     </button>
                     <div class="carousel-container">
-                        <div class="carousel-slides">
+                        <div class="carousel-slides" id="carousel1">
                             <img src="assets/mern-auth/mern-home.png" alt="MERN Home" class="carousel-slide active">
                             <img src="assets/mern-auth/mern-homeLogin.png" alt="MERN Home Login" class="carousel-slide">
                             <img src="assets/mern-auth/mern-register.png" alt="MERN Register" class="carousel-slide">
@@ -88,7 +88,7 @@
                     <button class="carousel-btn next" onclick="moveSlide(1)">
                         <i class="fas fa-chevron-right"></i>
                     </button>
-                    <div class="carousel-dots">
+                    <div class="carousel-dots" id="dots1">
                         <span class="dot active" onclick="currentSlide(0)"></span>
                         <span class="dot" onclick="currentSlide(1)"></span>
                         <span class="dot" onclick="currentSlide(2)"></span>
@@ -145,6 +145,45 @@
                         <span class="dot" onclick="currentSlide2(6)"></span>
                         <span class="dot" onclick="currentSlide2(7)"></span>
                         <span class="dot" onclick="currentSlide2(8)"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PORTFOLIO 3 -->
+            <div class="portfolio-box">
+                <div class="portfolio-info">
+                    <div class="portfolio-content">
+                        <i class="fas fa-user"></i>
+                        <h3>Portfolio Website</h3>
+                    </div>
+                    <div class="portfolio-deskripsi">
+                        <p>Website portfolio pribadi dengan desain modern dan responsif untuk menampilkan profil, proyek, dan informasi kontak. Dibangun menggunakan HTML, CSS, dan JavaScript murni, dengan fitur interaktif seperti smooth scrolling, carousel project, dan mode gelap.</p>
+                        <p>Teknologi :</p>
+                        <p>HTML5, CSS3, JavaScript (ES6), Font Awesome, Devicon, ScrollReveal.js, FormSubmit</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-carousel">
+                    <button class="carousel-btn prev" onclick="moveSlide3(-1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+
+                    <div class="carousel-container">
+                        <div class="carousel-slides" id="carousel3">
+                            <img src="assets/profile-web/home.png" alt="" class="carousel-slide active">
+                            <img src="assets/profile-web/portfolio.png" alt="" class="carousel-slide">
+                            <img src="assets/profile-web/contact.png" alt="" class="carousel-slide">
+                        </div>
+                    </div>
+
+                    <button class="carousel-btn next" onclick="moveSlide3(1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+
+                    <div class="carousel-dots" id="dots3">
+                        <span class="dot active" onclick="currentSlide3(0)"></span>
+                        <span class="dot" onclick="currentSlide3(1)"></span>
+                        <span class="dot" onclick="currentSlide3(2)"></span>
                     </div>
                 </div>
             </div>
