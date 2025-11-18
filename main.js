@@ -189,9 +189,42 @@ function currentSlide3(index) {
     showSlide3(index);
 }
 
-// Update auto-slide to include carousel 3
+// CAROUSEL 4 FUNCTIONALITY
+let currentSlideIndex4 = 0;
+
+function showSlide4(index) {
+    const slides = document.querySelectorAll('#carousel4 .carousel-slide');
+    const dots = document.querySelectorAll('#dots4 .dot');
+
+    if (!slides.length) return;
+
+    if (index >= slides.length) {
+        currentSlideIndex4 = 0;
+    } else if (index < 0) {
+        currentSlideIndex4 = slides.length - 1;
+    } else {
+        currentSlideIndex4 = index;
+    }
+
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+
+    slides[currentSlideIndex4].classList.add('active');
+    dots[currentSlideIndex4].classList.add('active');
+}
+
+function moveSlide4(direction) {
+    showSlide4(currentSlideIndex4 + direction);
+}
+
+function currentSlide4(index) {
+    showSlide4(index);
+}
+
+// AUTO-SLIDE FUNCTIONALITY FOR ALL CAROUSELS
 setInterval(() => {
     moveSlide(1);
     moveSlide2(1);
     moveSlide3(1);
+    moveSlide4(1);
 }, 7000);
